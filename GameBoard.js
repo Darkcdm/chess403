@@ -14,17 +14,17 @@ let GameBoard = {
 				//even row
 				if (y % 2 == 0) {
 					if (x % 2 == 0) {
-						cell = this.createCell(x, y, "black");
-					} else {
 						cell = this.createCell(x, y, "white");
+					} else {
+						cell = this.createCell(x, y, "black");
 					}
 				}
 				//odd row
 				else {
 					if (x % 2 == 0) {
-						cell = this.createCell(x, y, "white");
-					} else {
 						cell = this.createCell(x, y, "black");
+					} else {
+						cell = this.createCell(x, y, "white");
 					}
 				}
 				row.appendChild(cell);
