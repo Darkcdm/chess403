@@ -32,10 +32,10 @@ let GameBoard = {
 			this.gameArea.appendChild(row);
 		}
 		console.log("chessboard created");
-		div = document.getElementsByClassName("div");
+		//div = document.getElementsByClassName("div");
 		console.log(body);
 		console.log(this.gameArea);
-		body.appendChild(this.gameArea);
+		document.getElementById("body").appendChild(this.gameArea);
 	},
 	createCell: function (x, y, colour) {
 		cell = document.createElement("td");
