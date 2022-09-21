@@ -39,9 +39,13 @@ let GameBoard = {
 	},
 	createCell: function (x, y, colour) {
 		cell = document.createElement("td");
+		button = document.createElement("button");
+		button.innerHTML = "*";
+		cell.id = Pairing.getID(x, y);
+		cell.colour = colour;
+		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour + "<br>" + cell.id;
 
-		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour;
-
+		cell.appendChild(button);
 		return cell;
 	},
 	test: function (body) {
