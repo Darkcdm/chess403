@@ -38,15 +38,49 @@ let GameBoard = {
 		document.getElementById("body").appendChild(this.gameArea);
 	},
 	createCell: function (x, y, colour) {
+		cellID = Pairing.getID(x, y);
+
+		piece = this.checkIfOccupied(cellID);
+
 		cell = document.createElement("td");
 		button = document.createElement("button");
-		button.innerHTML = "*";
+
+		if (piece == null) {
+			button.innerHTML = "*";
+		} else {
+			cell.piece = piece;
+			button.innerHTML = piece.Symbol;
+
+			console.log("Setting piece...: " + piece.Symbol);
+		}
+
 		cell.id = Pairing.getID(x, y);
 		cell.colour = colour;
 		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour + "<br>" + cell.id;
 
 		cell.appendChild(button);
 		return cell;
+	},
+	checkIfOccupied: function (cellID) {
+		//check BlackPieces
+		for (i = 0; i < Main.BlackPieces.length; i++) {
+			piece = Main.BlackPieces[i];
+			pieceID = Pairing.getID(piece.X, piece.Y);
+
+			if (pieceID === cellID) {
+				return piece;
+			}
+		}
+		//check whitePieces
+		for (i = 0; i < Main.WhitePieces.length; i++) {
+			piece = Main.WhitePieces[i];
+			pieceID = Pairing.getID(piece.X, piece.Y);
+
+			if (pieceID === cellID) {
+				return piece;
+			}
+		}
+		return null;
 	},
 	test: function (body) {
 		console.log("Test");

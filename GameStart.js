@@ -7,6 +7,7 @@ let GameStart = {
 		this.setKnight(1, 7, "Black");
 		this.setQueen(1, 4, "Black");
 		this.setKing(1, 5, "Black");
+		this.setPawns(7, "White");
 	},
 	setPawns: function (row, colour) {
 		y = row;
