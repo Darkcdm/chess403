@@ -7,14 +7,26 @@ let GameStart = {
 		this.setKnight(1, 7, "Black");
 		this.setQueen(1, 4, "Black");
 		this.setKing(1, 5, "Black");
-		this.setPawns(7, "White");
 		x = 1;
 		for (i = 1; i < 3; i++) {
 			this.setRooks(1, "Black");
 			x = x + 7;
 		}
 	},
-	setWhites: function () {},
+	setWhites: function () {
+		this.setPawns(7, "White");
+		this.setBishop(8, 3, "white");
+		this.setBishop(8, 6, "White");
+		this.setKnight(8, 2, "White");
+		this.setKnight(8, 7, "White");
+		this.setQueen(8, 4, "White");
+		this.setKing(8, 5, "White");
+		x = 1;
+		for (i = 1; i < 3; i++) {
+			this.setRooks(1, "White");
+			x = x + 7;
+		}
+	},
 	setPawns: function (row, colour) {
 		y = row;
 
