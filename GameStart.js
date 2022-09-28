@@ -30,7 +30,7 @@ let GameStart = {
 			console.log(pawn);
 		}
 	},
-	setRooks: function (row, collum, colour) {
+	setRook: function (row, collum, colour) {
 		y = row;
 		x = collum;
 
