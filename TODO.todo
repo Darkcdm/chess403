@@ -21,6 +21,15 @@ Tagging:
 
 ✔ CREATE TODO @done (21/09/2022, 14:47:38)
 
+BASICS:
+    ✔ Game Area @done (28/09/2022, 17:54:33)
+    ✔ redering Game Pieces @done (28/09/2022, 17:54:47)
+    ☐ Moving figures
+    ☐ Checking Legal moves
+    ☐ 
+
+
+
 Better UI:
     ☐ Create TODO
 Better UX:
@@ -28,7 +37,7 @@ Better UX:
 
 
 Create Classes for:
-    ☐ Pawn
+    ✔ Pawn @done (28/09/2022, 17:54:55)
 
     ☐ Rook
 
