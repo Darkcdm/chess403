@@ -8,15 +8,12 @@ let GameStart = {
 		this.setQueen(1, 4, "Black");
 		this.setKing(1, 5, "Black");
 		this.setPawns(7, "White");
-	},
-	setBlacks: function () {
 		x = 1;
-		for (i = 1; i <3 ; i++) {
-			this.setRooks(1, "Black");	
+		for (i = 1; i < 3; i++) {
+			this.setRooks(1, "Black");
 			x = x + 7;
 		}
 	},
-
 	setPawns: function (row, colour) {
 		y = row;
 
@@ -29,7 +26,7 @@ let GameStart = {
 	setRooks: function (row, colour) {
 		y = row;
 
-		for (a = 1; a < 2 ; a++) {
+		for (a = 1; a < 2; a++) {
 			rook = new Rook(x, y, colour);
 			Main.BlackPieces.push(rook);
 			console.log(rook);
