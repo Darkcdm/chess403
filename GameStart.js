@@ -35,11 +35,11 @@ let GameStart = {
 		x = collum;
 
 		
-		if (y == 1 && x == 1) {
+		if (y == 1 && x == 1 || y == 1 && x == 8) {
 			rook = new Rook(x, y, colour);
 			Main.BlackPieces.push(rook);
 			console.log(rook);
-		} else if (y == 1 && x == 8) {
+		} else if (y == 8 && x == 1 || y == 8 && x == 8) {
 			rook = new Rook(x, y, colour);
 			Main.BlackPieces.push(rook);
 			console.log(rook);
@@ -49,11 +49,11 @@ let GameStart = {
 		y = row;
 		x = collum;
 
-		if (y == 1 && x == 3) {
+		if (y == 1 && x == 3 || y == 1 && x == 6) {
 			bishop = new Bishop(x, y, colour);
 			Main.BlackPieces.push(bishop);
 			console.log(bishop);
-		} else if (y == 1 && x == 6) {
+		} else if (y == 8 && x == 3 || y == 8 && x == 6) {
 			bishop = new Bishop(x, y, colour);
 			Main.BlackPieces.push(bishop);
 			console.log(bishop);
@@ -63,11 +63,11 @@ let GameStart = {
 		y = row;
 		x = collum;
 
-		if (y == 1 && x == 2) {
+		if (y == 1 && x == 2 || y == 1 && x == 7) {
 			knight = new Knight(x, y, colour);
 			Main.BlackPieces.push(knight);
 			console.log(knight);
-		} else if (y == 1 && x == 7) {
+		} else if (y == 8 && x == 2 || y == 8 && x == 7) {
 			knight = new Knight(x, y, colour);
 			Main.BlackPieces.push(knight);
 			console.log(knight);
@@ -77,7 +77,7 @@ let GameStart = {
 		y = row;
 		x = collum;
 
-		if (y == 1 && x == 4) {
+		if (y == 1 && x == 4 || y == 8 && x == 4) {
 			queen = new Queen(x, y, colour);
 			Main.BlackPieces.push(queen);
 			console.log(queen);
@@ -87,7 +87,7 @@ let GameStart = {
 		y = row;
 		x = collum;
 
-		if (y == 1 && x == 5) {
+		if (y == 1 && x == 5 || y == 8 && x == 5) {
 			king = new King(x, y, colour);
 			Main.BlackPieces.push(king);
 			console.log(king);
