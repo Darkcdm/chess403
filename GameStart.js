@@ -22,12 +22,11 @@ let GameStart = {
 		y = row;
 		x = collum;
 
-		if (y == 1 && x == 3){
+		if (y == 1 && x == 3) {
 			bishop = new Bishop(x, y, colour);
 			Main.BlackPieces.push(bishop);
 			console.log(bishop);
-		}
-		else if (y == 1 && x == 6){
+		} else if (y == 1 && x == 6) {
 			bishop = new Bishop(x, y, colour);
 			Main.BlackPieces.push(bishop);
 			console.log(bishop);
@@ -36,13 +35,12 @@ let GameStart = {
 	setKnight: function (row, collum, colour) {
 		y = row;
 		x = collum;
-	
-		if (y == 1 && x == 2){
+
+		if (y == 1 && x == 2) {
 			knight = new Knight(x, y, colour);
 			Main.BlackPieces.push(knight);
 			console.log(knight);
-		}
-		else if (y == 1 && x == 7){
+		} else if (y == 1 && x == 7) {
 			knight = new Knight(x, y, colour);
 			Main.BlackPieces.push(knight);
 			console.log(knight);
@@ -51,8 +49,8 @@ let GameStart = {
 	setQueen: function (row, collum, colour) {
 		y = row;
 		x = collum;
-	
-		if (y == 1 && x == 4){
+
+		if (y == 1 && x == 4) {
 			queen = new Queen(x, y, colour);
 			Main.BlackPieces.push(queen);
 			console.log(queen);
@@ -61,11 +59,11 @@ let GameStart = {
 	setKing: function (row, collum, colour) {
 		y = row;
 		x = collum;
-	
-		if (y == 1 && x == 1){
+
+		if (y == 1 && x == 5) {
 			king = new King(x, y, colour);
 			Main.BlackPieces.push(king);
 			console.log(king);
 		}
-	}
+	},
 };
