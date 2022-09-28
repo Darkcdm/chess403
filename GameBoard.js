@@ -37,7 +37,7 @@ let GameBoard = {
 		console.log(this.gameArea);
 		document.getElementById("body").appendChild(this.gameArea);
 	},
-	createCell: function (x, y, colour) {
+	createCell: function (x, y, colour,) {
 		cellID = Pairing.getID(x, y);
 
 		piece = this.checkIfOccupied(cellID);
@@ -49,7 +49,7 @@ let GameBoard = {
 			button.innerHTML = "*";
 		} else {
 			cell.piece = piece;
-			button.innerHTML = piece.Symbol;
+			button.innerHTML = piece.Symbol + "<br>" + piece.Colour;
 
 			console.log("Setting piece...: " + piece.Symbol);
 		}
