@@ -14,6 +14,7 @@ let GameStart = {
 			x = x + 7;
 		}
 	},
+	setWhites: function () {},
 	setPawns: function (row, colour) {
 		y = row;
 
