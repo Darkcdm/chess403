@@ -54,6 +54,10 @@ let GameBoard = {
 			console.log("Setting piece...: " + piece.Symbol);
 		}
 
+		button.onclick = function () {
+			console.log(this);
+		};
+
 		cell.id = Pairing.getID(x, y);
 		cell.colour = colour;
 		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour + "<br>" + cell.id;
