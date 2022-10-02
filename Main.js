@@ -3,6 +3,7 @@ let Main = {
 	BlackPieces: [],
 	WhitePieces: [],
 	ActiveCell: [],
+	ActiveButton: [],
 	start: function (body) {
 		//this.body = body;
 		GameStart.setBlacks();
