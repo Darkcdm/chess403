@@ -4,8 +4,8 @@ let Main = {
 	WhitePieces: [],
 	ActiveCell: [],
 	ActiveButton: [],
-	test(test) {
-		this.ActiveButton = test;
+	switchActiveCell(cell) {
+		this.ActiveCell = cell;
 	},
 	start: function (body) {
 		//this.body = body;
@@ -13,6 +13,7 @@ let Main = {
 		GameStart.setWhites();
 		GameBoard.render(body);
 	},
+
 	playPiece: function (piece, cell) {
 		//check if player is playing the same cell
 		if (cell != this.ActiveCell) {
@@ -21,10 +22,10 @@ let Main = {
 				GameBoard.paintCellDefault(this.ActiveCell);
 			}
 			this.switchActiveCell(cell);
-			GameBoard.paintSelectCell(this.ActiveCell);
+
+			if (this.ActiveCell.piece != null) {
+				GameBoard.paintSelectCell(this.ActiveCell);
+			}
 		}
-	},
-	switchActiveCell(cell) {
-		this.ActiveCell = cell;
 	},
 };
