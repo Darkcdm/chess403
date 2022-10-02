@@ -37,7 +37,7 @@ let GameBoard = {
 		console.log(this.gameArea);
 		document.getElementById("body").appendChild(this.gameArea);
 	},
-	createCell: function (x, y, colour,) {
+	createCell: function (x, y, colour) {
 		cellID = Pairing.getID(x, y);
 
 		piece = this.checkIfOccupied(cellID);
@@ -55,14 +55,12 @@ let GameBoard = {
 		}
 
 		button.onclick = function () {
-			
-			if (this != Main.ActiveButton){
-				this.style.backgroundColor = 'salmon';
-				this.button = Main.ActiveButton;
-			}
-			
+			button = this;
+			cell = button.parentElement;
+			piece = cell.piece;
 
-		}
+			Main.playPiece(piece, cell);
+		};
 		cell.id = Pairing.getID(x, y);
 		cell.colour = colour;
 		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour + "<br>" + cell.id;
@@ -90,6 +88,15 @@ let GameBoard = {
 			}
 		}
 		return null;
+	},
+	paintSelectCell: function (cell) {
+		cell.style.backgroundColor = "#ffd480";
+	},
+	paintPossibleMoves: function (cell) {
+		cell.style.backgroundColor = "#ffd480";
+	},
+	paintCellDefault: function (cell) {
+		cell.style.backgroundColor = "#FFFFFF";
 	},
 	test: function (body) {
 		console.log("Test");
