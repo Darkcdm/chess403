@@ -26,6 +26,8 @@ let Main = {
 			if (this.ActiveCell.piece != null) {
 				GameBoard.paintSelectCell(this.ActiveCell);
 			}
+
+			piece.showLegalMoves();
 		}
 	},
 };
