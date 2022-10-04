@@ -62,6 +62,7 @@ let GameBoard = {
 			Main.playPiece(piece, cell);
 		};
 		cell.id = Pairing.getID(x, y);
+		cell.possibleMove = false;
 		cell.colour = colour;
 		cell.innerHTML = "[" + x + ", " + y + "] <br> " + colour + "<br>" + cell.id;
 
