@@ -47,6 +47,7 @@ let GameBoard = {
 
 		if (piece == null) {
 			button.innerHTML = "*";
+			cell.piece = null;
 		} else {
 			cell.piece = piece;
 			button.innerHTML = piece.Symbol + "<br>" + piece.Colour;
