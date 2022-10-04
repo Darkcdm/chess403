@@ -47,6 +47,7 @@ let GameBoard = {
 
 		if (piece == null) {
 			button.innerHTML = "*";
+			cell.piece = null;
 		} else {
 			cell.piece = piece;
 			button.innerHTML = piece.Symbol + "<br>" + piece.Colour;
@@ -94,7 +95,7 @@ let GameBoard = {
 		cell.style.backgroundColor = "#ffd480";
 	},
 	paintPossibleMoves: function (cell) {
-		cell.style.backgroundColor = "#ffd480";
+		cell.style.backgroundColor = "#1aff1a";
 	},
 	paintCellDefault: function (cell) {
 		cell.style.backgroundColor = "#FFFFFF";
