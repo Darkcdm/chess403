@@ -60,7 +60,7 @@ let GameBoard = {
 			cell = button.parentElement;
 			piece = cell.piece;
 
-			Main.playPiece(piece, cell);
+			Main.selectPiece(piece, cell);
 		};
 		cell.id = Pairing.getID(x, y);
 		cell.possibleMove = false;

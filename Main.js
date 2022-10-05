@@ -15,7 +15,7 @@ let Main = {
 		GameBoard.render(body);
 	},
 
-	playPiece: function (piece, cell) {
+	selectPiece: function (piece, cell) {
 		GameBoard.resetAllPaints();
 		//check if player is playing the same cell
 		if (cell != this.ActiveCell) {
