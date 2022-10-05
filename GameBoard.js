@@ -93,12 +93,21 @@ let GameBoard = {
 	},
 	paintSelectCell: function (cell) {
 		cell.style.backgroundColor = "#ffd480";
+		Main.PaintedCell.push(cell);
 	},
 	paintPossibleMoves: function (cell) {
 		cell.style.backgroundColor = "#1aff1a";
+		Main.PaintedCell.push(cell);
 	},
 	paintCellDefault: function (cell) {
 		cell.style.backgroundColor = "#FFFFFF";
+	},
+	resetAllPaints: function () {
+		for (var i = 0; i < Main.PaintedCell.length; i++) {
+			paintedCell = Main.PaintedCell.pop();
+
+			this.paintCellDefault(paintedCell);
+		}
 	},
 	test: function (body) {
 		console.log("Test");

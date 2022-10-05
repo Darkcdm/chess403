@@ -4,6 +4,7 @@ let Main = {
 	WhitePieces: [],
 	ActiveCell: [],
 	ActiveButton: [],
+	PaintedCell: [],
 	switchActiveCell(cell) {
 		this.ActiveCell = cell;
 	},
@@ -15,6 +16,7 @@ let Main = {
 	},
 
 	playPiece: function (piece, cell) {
+		GameBoard.resetAllPaints();
 		//check if player is playing the same cell
 		if (cell != this.ActiveCell) {
 			//checking if there even is an active cell so far
@@ -27,7 +29,9 @@ let Main = {
 				GameBoard.paintSelectCell(this.ActiveCell);
 			}
 
-			piece.showLegalMoves();
+			if (piece != null) {
+				piece.showLegalMoves();
+			}
 		}
 	},
 };
