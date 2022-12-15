@@ -4,6 +4,7 @@ class Pawn {
 		this.Y = startY;
 		this.Colour = Colour;
 		this.untouched = true;
+		this.legalMoves = [];
 
 		if (this.Colour == "Black") {
 			this.velocity = 1;
@@ -11,10 +12,12 @@ class Pawn {
 			this.velocity = -1;
 		}
 
+		this.calculateLegalMoves();
+
 		this.Symbol = "P";
 	}
 	checkLegalMove(desiredX, desiredY) {}
-	showLegalMoves() {
+	calculateLegalMoves() {
 		let vector = this.velocity;
 
 		let desiredX = this.X;
@@ -22,9 +25,7 @@ class Pawn {
 
 		let cellID = Pairing.getID(desiredX, desiredY);
 
-		let cell = document.getElementById(cellID);
-
-		GameBoard.paintPossibleMoves(cell);
+		this.legalMoves.push(cellID);
 
 		if (this.untouched) {
 			vector = vector * 2;
@@ -34,8 +35,12 @@ class Pawn {
 
 			let cellID = Pairing.getID(desiredX, desiredY);
 
-			let cell = document.getElementById(cellID);
-
+			this.legalMoves.push(cellID);
+		}
+	}
+	showLegalMoves() {
+		for (let i = 0; i < this.legalMoves.length; i++) {
+			let cell = document.getElementById(this.legalMoves[i]);
 			GameBoard.paintPossibleMoves(cell);
 		}
 	}
